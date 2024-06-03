@@ -7,9 +7,26 @@
     "id": 0
   },
   "detail": {
-    "contributors": [],
-    "diagrams": [],
-    "diagramTop": 0,
+    "contributors": [
+      {
+        "name": "Ares Judda Rivera Soto"
+      },
+      {
+        "name": "Miriam Ramírez Zarate"
+      }
+    ],
+    "diagrams": [
+      {
+        "id": 1,
+        "title": "MusicShark",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.2.0",
+        "cells": []
+      }
+    ],
+    "diagramTop": 2,
     "reviewer": "Humberto Guillermo Vera Amaro",
     "threatTop": 0
   }
