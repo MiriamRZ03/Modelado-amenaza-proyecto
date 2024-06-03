@@ -23,11 +23,1250 @@
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
         "version": "2.2.0",
-        "cells": []
+        "cells": [
+          {
+            "position": {
+              "x": 660,
+              "y": 189.9999999999999
+            },
+            "size": {
+              "width": 190,
+              "height": 140
+            },
+            "attrs": {
+              "text": {
+                "text": "MusicShark Frontend"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "b7c129f7-e020-4b13-a5da-34513b8b0043",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.Process",
+              "name": "MusicShark Frontend",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "c43d6078-1d95-478a-bfa5-ecdd35558bb2",
+                  "title": " Exposición de información sensible.",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "un usuario intenta acceder a funciones o datos que están más allá de su nivel de autorización, permitiéndole realizar acciones que no debería poder realizar.\n\n",
+                  "mitigation": "Control de acceso basado en roles (RBAC), encriptación de datos sensibles.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": ""
+                },
+                {
+                  "id": "9a708999-e7ba-4194-9684-e059cdecc283",
+                  "title": "servicio inaccesible",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Un atacante podría intentar inundar el front-end con una gran cantidad de solicitudes para hacerlo inaccesible.",
+                  "mitigation": " Implementar rate limiting y servicios de mitigación de ataques DoS.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 310,
+              "y": 100
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Suscriptores "
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "05364cf3-a80f-420c-8bd2-db97378927e4",
+            "zIndex": 2,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Suscriptores ",
+              "description": "usuarios que escuchan música ",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "c9909a07-5211-49cb-86bd-c88cbb0db6ca",
+                  "title": "suplantar la identidad ",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "El token de autorización puede ser robado y usado por un atacante.",
+                  "mitigation": "Uso de autenticación multifactor (MFA) y mecanismos de detección de uso anómalo de tokens.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 1070,
+              "y": 80
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Administrador"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "71fa6f0e-3216-44a4-a6a0-37f71a668142",
+            "zIndex": 3,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Administrador",
+              "description": "Encargado de la gestión de las caciones dentro del sistema",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "f85bc75e-22c5-44a1-af03-17df7ee9b084",
+                  "title": "suplantar la identidad ",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "n atacante puede suplantar la identidad de un usuario legítimo.",
+                  "mitigation": "Implementación de JWT, Autenticación robusta",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 695,
+              "y": 720
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Base de datos"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "b9fc8d3c-a0da-4743-98b4-8eff850c4206",
+            "zIndex": 4,
+            "data": {
+              "type": "tm.Store",
+              "name": "Base de datos",
+              "description": "Almacena la información de las canciones.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "c135dde1-707e-47ab-b8e5-ee6f8c113f0e",
+                  "title": "Acceso no autorizado a datos sensibles",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Un atacante podría intentar acceder a datos sensibles en la base de datos para los cuales no tiene privilegios de acceso.",
+                  "mitigation": "Implementar controles de acceso adecuados en la base de datos para garantizar que solo los usuarios autorizados puedan acceder a los datos sensibles. Esto incluye el uso de roles y privilegios de usuario, así como la segmentación de datos cuando sea posible.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": ""
+                },
+                {
+                  "id": "2473906a-73dc-42f8-995b-9f720ada0457",
+                  "title": "Manipulación de datos",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Un atacante podría intentar manipular los datos en la base de datos de MusicShark, por ejemplo, insertando, actualizando o eliminando registros de forma no autorizada.",
+                  "mitigation": "Implementar mecanismos de validación de entrada para asegurar que solo se realicen operaciones válidas en la base de datos. Además, utilizar transacciones y registros de auditoría para rastrear y detectar cambios inesperados en los datos.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": ""
+                },
+                {
+                  "id": "80fc240e-afe2-4810-91b8-beb1c13440ab",
+                  "title": "Denegación de servicio ",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Los atacantes podrían intentar sobrecargar la base de datos de MusicShark enviando una gran cantidad de solicitudes simultáneas, lo que podría hacer que el sistema se vuelva inaccesible para usuarios legítimos.",
+                  "mitigation": "Implementar límites de tasa y mecanismos de protección contra ataques de denegación de servicio (DoS) para limitar el número de solicitudes que pueden procesarse en un período de tiempo determinado. ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web request",
+              "description": "solicitud  del usuario",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "e2ea4a3c-1814-4590-9702-70969c078cd2",
+                  "title": "Information disclosure",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Un atacante obtiene acceso no autorizado a información sensible a través de la solicitud.\n",
+                  "mitigation": "Implementación de controles de acceso basados en roles (RBAC) y revisión rigurosa de permisos y políticas de acceso.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "faf4069f-9b2c-465c-a6c8-ed0fb429f9bc",
+                  "title": "modifica la solicitud en tránsito",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Un atacante modifica la solicitud en tránsito entre el usuario y la API.",
+                  "mitigation": "Uso de HTTPS para cifrar las solicitudes y respuestas, asegurando la integridad de los datos en tránsito.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "7d23a29d-93aa-4c23-ae74-0a7ad8e55498",
+            "source": {
+              "cell": "05364cf3-a80f-420c-8bd2-db97378927e4"
+            },
+            "target": {
+              "cell": "b7c129f7-e020-4b13-a5da-34513b8b0043"
+            },
+            "labels": [
+              "Web request"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web response ",
+              "description": "respuesta del sistema hacia el usuario",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "f10c8721-29c5-4f24-972e-815492d7eace",
+                  "title": "Divulgación de información",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Respuesta recibida del sistema hacia el usuario\nUn atacante podría interceptar y modificar la respuesta en tránsito entre MusicShark y el usuario.",
+                  "mitigation": "Uso de HTTPS para cifrar las respuestas, asegurando la integridad de los datos en tránsito.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "ceeaa3be-bbe6-4dd5-bdb1-466d3f047af9",
+            "source": {
+              "cell": "b7c129f7-e020-4b13-a5da-34513b8b0043"
+            },
+            "target": {
+              "cell": "05364cf3-a80f-420c-8bd2-db97378927e4"
+            },
+            "vertices": [
+              {
+                "x": 410,
+                "y": 290
+              }
+            ],
+            "labels": [
+              "Web response "
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "6f35e0a3-4cfa-43f0-80c7-95b52da448f1",
+                  "title": "solicitud interceptada ",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "La solicitud podría ser interceptada y modificada en tránsito.",
+                  "mitigation": "Uso de HTTPS para cifrar la solicitud.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "2fb30668-adb5-4d9b-8538-59af45c84e58",
+                  "title": "exponer información ",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": " La solicitud podría exponer información sensible si no está adecuadamente protegida.",
+                  "mitigation": "Controles de acceso adecuados y cifrado de datos sensibles.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "913ec1ff-a81f-44cf-8d25-5f367407c24b",
+            "source": {
+              "cell": "b7c129f7-e020-4b13-a5da-34513b8b0043"
+            },
+            "target": {
+              "cell": "71fa6f0e-3216-44a4-a6a0-37f71a668142"
+            },
+            "vertices": [
+              {
+                "x": 840,
+                "y": 110
+              },
+              {
+                "x": 870,
+                "y": 80
+              }
+            ],
+            "labels": [
+              "Web response"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web response ",
+              "description": "solicitud del administrador hacia el sistema",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "7215c0db-b101-4669-9fc9-17bd6ca29de8",
+                  "title": "respuesta interceptada",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "La respuesta podría ser interceptada y modificada en tránsito.",
+                  "mitigation": " Uso de HTTPS para cifrar la respuesta.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "d358f892-21ab-4373-89b1-0b8bbc0c252e",
+            "source": {
+              "cell": "71fa6f0e-3216-44a4-a6a0-37f71a668142"
+            },
+            "target": {
+              "cell": "b7c129f7-e020-4b13-a5da-34513b8b0043"
+            },
+            "vertices": [
+              {
+                "x": 1070,
+                "y": 280
+              }
+            ],
+            "labels": [
+              "Web response "
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Query resquest",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "e4e4f02e-d557-41a7-a29e-caf040083480",
+            "source": {
+              "cell": "41e4a585-de3e-454f-9ab0-3310fad56016"
+            },
+            "target": {
+              "x": 720,
+              "y": 710
+            },
+            "vertices": [
+              {
+                "x": 690,
+                "y": 640
+              }
+            ],
+            "labels": [
+              "Query resquest"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Query response\n",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "d8799e7a-8fe7-4f39-ab20-4b52d8ced9a7",
+                  "title": "Exposición de información confidencial",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": " La base de datos podría exponer información sensible o datos confidenciales a MusicShark a través de las respuestas.",
+                  "mitigation": "    Implementar controles de acceso adecuados para limitar el acceso a datos sensibles solo a los componentes de la aplicación que lo necesiten.\n\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": ""
+                },
+                {
+                  "id": "6832e748-25e4-4cfe-8e8d-62820bf3c963",
+                  "title": "Manipulación de datos",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Un atacante podría manipular los datos en las respuestas de la base de datos para alterar la funcionalidad o la integridad de MusicShark.\n",
+                  "mitigation": "Validar y verificar todas las respuestas de la base de datos para detectar cualquier manipulación o alteración no autorizada. I",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": ""
+                },
+                {
+                  "id": "d67c88f0-90d9-41b4-9d97-75d43b38f8d6",
+                  "title": "Denegación de servicio",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "La base de datos podría ser objeto de ataques de denegación de servicio diseñados para interrumpir la disponibilidad de MusicShark.",
+                  "mitigation": "Implementar medidas de seguridad y controles de acceso para proteger la base de datos contra ataques de denegación de servicio.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 24,
+                  "score": ""
+                },
+                {
+                  "id": "7a689edd-4d83-456a-a1ce-c5aec5098a97",
+                  "title": "Fugas de datos",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": " La base de datos podría exponer datos sensibles o confidenciales a través de respuestas que no están protegidas adecuadamente.",
+                  "mitigation": "Utilizar técnicas de encriptación para proteger los datos sensibles en la base de datos y durante la transferencia de datos entre la base de datos y MusicShark. ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 25,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "9fdd56ba-b1bb-43cb-97d5-4405666803e7",
+            "source": {
+              "x": 800,
+              "y": 710
+            },
+            "target": {
+              "cell": "41e4a585-de3e-454f-9ab0-3310fad56016"
+            },
+            "vertices": [
+              {
+                "x": 830,
+                "y": 680
+              },
+              {
+                "x": 850,
+                "y": 650
+              }
+            ],
+            "labels": [
+              "Query response\n"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Request",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "d7571cee-e72f-40c3-8b0f-406059f8260f",
+                  "title": " interceptar y modificar las solicitudes",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Un atacante podría interceptar y modificar las solicitudes del frontend hacia el backend para alterar los datos o la funcionalidad de la aplicación.",
+                  "mitigation": "Utilizar conexiones seguras (por ejemplo, HTTPS) para cifrar las comunicaciones entre el frontend y el backend. Además, implementar mecanismos de autenticación y autorización para validar la integridad de las solicitudes y asegurar que solo las solicitudes legítimas sean procesadas.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 26,
+                  "score": ""
+                },
+                {
+                  "id": "0afbe279-bf91-4ae8-9535-ca1b129c2b5f",
+                  "title": "sobrecargar el backend con un gran número de solicitudes maliciosas",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Los atacantes podrían intentar sobrecargar el backend con un gran número de solicitudes maliciosas, lo que podría hacer que la aplicación sea inaccesible para los usuarios legítimos.",
+                  "mitigation": " Implementar medidas de protección contra ataques DoS, como rate limiting, control de acceso basado en IP y servicios de mitigación de ataques.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 27,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "89ccf566-162a-4299-b7d9-f52724b59dc8",
+            "source": {
+              "cell": "b7c129f7-e020-4b13-a5da-34513b8b0043"
+            },
+            "target": {
+              "cell": "41e4a585-de3e-454f-9ab0-3310fad56016"
+            },
+            "vertices": [
+              {
+                "x": 670,
+                "y": 360
+              },
+              {
+                "x": 690,
+                "y": 390
+              }
+            ],
+            "labels": [
+              "Request"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "1d84f446-67c7-4db0-a2b8-e74419c49442",
+                  "title": "divulgar información sensible o confidencial",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "El backend podría divulgar información sensible o confidencial en las respuestas enviadas al frontend, exponiendo datos sensibles a posibles atacantes.",
+                  "mitigation": "Aplicar prácticas de seguridad como la encriptación de datos sensibles y la implementación de controles de acceso adecuados para limitar el acceso a la información confidencial. ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
+                  "score": ""
+                },
+                {
+                  "id": "72ba8d5b-c48e-4710-a898-cb1e7c69f5de",
+                  "title": "interceptar y modificar las respuestas ",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": " Los atacantes podrían interceptar y modificar las respuestas del backend hacia el frontend para alterar los datos o la funcionalidad de la aplicación.",
+                  "mitigation": "Utilizar conexiones seguras (por ejemplo, HTTPS) para cifrar las comunicaciones entre el backend y el frontend. ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 29,
+                  "score": ""
+                },
+                {
+                  "id": "9c7bdd41-11da-46e0-97fb-b9574f5a2414",
+                  "title": "sobrecargar el frontend con un gran número de respuestas maliciosas",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": " Los atacantes podrían intentar sobrecargar el frontend con un gran número de respuestas maliciosas, lo que podría hacer que la aplicación sea inaccesible para los usuarios legítimos.",
+                  "mitigation": " Implementar medidas de protección contra ataques DoS en el frontend, como rate limiting, cacheo de respuestas y la implementación de mecanismos para detectar y bloquear solicitudes maliciosas.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 30,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "97a6e457-d4d1-4350-951b-b422f29b7a2b",
+            "source": {
+              "cell": "41e4a585-de3e-454f-9ab0-3310fad56016"
+            },
+            "target": {
+              "cell": "b7c129f7-e020-4b13-a5da-34513b8b0043"
+            },
+            "vertices": [
+              {
+                "x": 840,
+                "y": 400
+              },
+              {
+                "x": 840,
+                "y": 360
+              }
+            ],
+            "labels": [
+              "Response"
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Suscriptor/server limite",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "8ec03a90-7984-4beb-b365-1502c41809ff",
+            "source": {
+              "x": 290,
+              "y": 220
+            },
+            "target": {
+              "x": 530,
+              "y": 60
+            },
+            "vertices": [
+              {
+                "x": 430,
+                "y": 230
+              }
+            ],
+            "labels": [
+              "Suscriptor/server limite"
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Administrador / Server limite",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "eeb1b361-3cf2-4781-8b6d-7aef61c30944",
+            "source": {
+              "x": 940,
+              "y": 30
+            },
+            "target": {
+              "x": 1150,
+              "y": 250
+            },
+            "labels": [
+              "Administrador / Server limite"
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Seguridad Frontal-Backend",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "f9b9ca5a-1b6b-4320-84b3-3a919c918a38",
+            "source": {
+              "x": 620,
+              "y": 420
+            },
+            "target": {
+              "x": 950,
+              "y": 410
+            },
+            "vertices": [
+              {
+                "x": 710,
+                "y": 380
+              },
+              {
+                "x": 770,
+                "y": 410
+              }
+            ],
+            "labels": [
+              "Seguridad Frontal-Backend"
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Límite de Confianza Back-end-Base de Datos",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "c44240df-4e5a-42fb-a4d9-1caf53ab78d6",
+            "source": {
+              "x": 420,
+              "y": 670
+            },
+            "target": {
+              "x": 1010,
+              "y": 690
+            },
+            "labels": [
+              "Límite de Confianza Back-end-Base de Datos"
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
+          },
+          {
+            "position": {
+              "x": 660,
+              "y": 430
+            },
+            "size": {
+              "width": 230,
+              "height": 150
+            },
+            "attrs": {
+              "text": {
+                "text": "MusicShark-Backend"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "41e4a585-de3e-454f-9ab0-3310fad56016",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Process",
+              "name": "MusicShark-Backend",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "b77b338c-0ff3-4b1e-9fd7-f2c2f754ff48",
+                  "title": "datos sensibles expuestos",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Datos sensibles podrían ser expuestos debido a una configuración incorrecta o vulnerabilidades en el back-end.",
+                  "mitigation": "Implementar controles de acceso adecuados y cifrado de datos sensibles.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": ""
+                },
+                {
+                  "id": "96b75319-7f7f-4955-8b9f-b9a9da8fa7a5",
+                  "title": "comprometer solicitud del sistema",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Un atacante podría intentar inyectar código malicioso en las solicitudes para comprometer la seguridad del sistema.",
+                  "mitigation": " Utilizar consultas parametrizadas y validar todas las entradas del usuario.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": ""
+                }
+              ]
+            }
+          }
+        ]
       }
     ],
     "diagramTop": 2,
     "reviewer": "Humberto Guillermo Vera Amaro",
-    "threatTop": 0
+    "threatTop": 30
   }
 }
